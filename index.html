@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DevOps → AI Roadmap Tracker</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div class="logo" aria-hidden></div>
+      <h1 style="margin:0">DevOps → AI Roadmap Tracker</h1>
+    </div>
+
+    <div class="controls">
+      <button id="tabHome" class="btn">Home</button>
+      <button id="tabDetail" class="btn ghost">Detail</button>
+      <button id="tabProgress" class="btn ghost">Progress</button>
+
+      <label class="toggle" style="display:flex;align-items:center;gap:8px">
+        <input id="themeToggle" type="checkbox" style="display:inline-block;width:16px;height:16px">
+        <span style="font-weight:600">Theme</span>
+      </label>
+
+      <button id="exportJson" class="btn ghost">Export JSON</button>
+      <button id="exportCsv" class="btn ghost">Export CSV</button>
+
+      <label class="btn ghost">Import
+        <input id="importFile" type="file" style="display:none" accept=".json,.csv">
+      </label>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside id="sidebar"></aside>
+
+    <main>
+      <section id="homeView" class="card"></section>
+      <section id="detailView" class="card" style="display:none"></section>
+      <section id="progressView" class="card" style="display:none"></section>
+    </main>
+  </div>
+
+  <footer>Built for execution. Export/import progress. Theme persists.</footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
